@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <%- include('masterPage/head.ejs'); -%>
+    <script defer src="js/processGomoku.js"></script>
+    <script defer src="js/event.js"></script>
+    <title>Game Cờ Caro 2 Player</title>
+</head>
+
+<body>
+    <!-- navbar  -->
+    <%- include('masterPage/navbar.ejs'); -%>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- navigation -->
+            <%- include('masterPage/navigation.ejs'); -%>
+
+            <main role="main" id="chess" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 row">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 col-md-12">
+                    <h1 class="h2 center-block">Chơi 2 người</h1>
+                </div>
+                <div class="col-sm-12">
+                    <div id="khung-ban-co-1" class="align-items-center pb-2 mb-3 khung-ban-co">
+                    </div>
+                    <h3 class="notice-result"></h3>
+                    <div class="div-option">
+                        <button id="btn-ready-gomoku" type="button" class="btn btn-success btn-play float-left">Chơi
+                            lại</button>
+                
+                    </div>
+                    
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>

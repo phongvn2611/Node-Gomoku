@@ -1,0 +1,38 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a style="display: flex; align-items: center;" class="navbar-brand" href="/">
+      <img src="./images/logo.png" alt="Cờ caro" width="30px" style="margin-right: 10px;"
+        class="d-inline-block align-text-top">
+      <h1>Cờ Caro</h1>
+    </a>
+
+    <ul class="navbar-items navbar-nav ">
+      <li class="navbar-item text-nowrap">
+        <a id="btn-sign-in" class="nav-link" data-toggle="modal" data-target="#signInModal">Nhập tên</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Modal -->
+<div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signInModalLabel">Tên của bạn</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="text" class="form-control ds-input" id="username-input" placeholder="Nhập tên của bạn">
+        <p class="notice-error">Thông báo lỗi</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="btn-cancel-login" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+        <button type="button" id="btn-submit-login" class="btn btn-primary">Đồng ý</button>
+      </div>
+    </div>
+  </div>
+</div>

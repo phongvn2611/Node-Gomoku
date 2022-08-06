@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <%- include('masterPage/head.ejs'); -%>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script defer src="/js/processGomoku1Player.js"></script>
+    <script defer src="/js/AIGomoku.js"></script>
+    <title>Game Cờ Caro 1 Player</title>
+</head>
+
+<body onLoad="Loaded()" id="bgr">
+
+
+    <!-- narbar  -->
+    <%- include('masterPage/navbar.ejs'); -%>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- navigation -->
+            <%- include('masterPage/navigation.ejs'); -%>
+
+            <main role="main" id="chess" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 row">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 col-md-12">
+                    <h1 class="h2 center-block">Chơi với máy</h1>
+                </div>
+                <div class="col-sm-12">
+                    <div id="divmain" class="align-items-center pb-2 mb-3 khung-ban-c">
+                        <table id="table">
+                        </table>
+                    </div>
+                    <h3 class="notice-result"></h3>
+                    <div class="div-option">
+                        <button id="btn-ready-gomoku" value="PLAYER VS COMPUTER" onClick="PvsM()" type="button"
+                            class="btn btn-success btn-play float-left">Chơi
+                            lại</button>
+                        <div class="div-option2">
+                            <div>
+                                <input type="checkbox" id="chbtime" onClick="TimeReturn()" /><b>TIME:</b>
+                                <progress id="pgrTime" max="100" value="100"></progress>
+                                <time></time>
+                            </div>
+                            <br>
+                            <div>
+                                <button onClick="Undo(2)" class="btn-warning">Undo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+
+</body>
+
+</html>
